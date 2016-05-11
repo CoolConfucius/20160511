@@ -25,7 +25,8 @@ function load(){
   var index = 0; 
   while(index < data.length && index < page * 10){
     var $item = $("<div>").text(data[index].toString());
-    $table.append();
+    $table.append($item);
     index++; 
   }
+  $('#content').append($table);
 }
