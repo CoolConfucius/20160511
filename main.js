@@ -7,8 +7,9 @@ for (var i = 0; i < 100; i++) {
 };
 
 obj = {
-  all: []
+  all: data
 }
+
 
 function init(){
   load(); 
