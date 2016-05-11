@@ -3,7 +3,7 @@ $(document).ready(init);
 var obj = {};
 
 obj = {
-  all: []; 
+  all: []
 }
 
 function init(){
@@ -11,7 +11,8 @@ function init(){
 }
 
 function load(){
-  alert("load!");
-  var $text = $("h2").text("H2 text");
+  // alert("load!");
+  var $text = $("h2");
+  $text.text("text");
   $('#content').append($text);
 }
