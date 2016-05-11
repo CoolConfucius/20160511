@@ -9,9 +9,23 @@ for (var i = 0; i < 100; i++) {
 obj = {
   all: data
 }
+var datacursor = 0; 
+var page = 1; 
+while (datacursor < data.length){
+  obj[page.toString()] = [];
+  for (var i = 0; i <= 10; i++) {
+    if (datacursor < data.length) {
+      obj[page.toString()].push(data[datacursor]);
+      datacursor++; 
+    };
+  };
+  page++; 
+}
+
+
 for (var i = 0; i < data.length; i++) {
-  // var page = 1; 
-  obj.1 = [];
+  var page = 1; 
+  obj[page.toString()] = [];
   // data[i]
 };
 
