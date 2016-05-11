@@ -9,6 +9,11 @@ for (var i = 0; i < 100; i++) {
 obj = {
   all: data
 }
+for (var i = 0; i < data.length; i++) {
+  // var page = 1; 
+  obj.1 = [];
+  // data[i]
+};
 
 
 function init(){
