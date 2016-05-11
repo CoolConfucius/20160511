@@ -13,13 +13,17 @@ var datacursor = 0;
 var page = 1; 
 while (datacursor < data.length){
   obj[page.toString()] = [];
-  for (var i = 0; i <= 10; i++) {
+  for (var i = 0; i < 10; i++) {
     if (datacursor < data.length) {
+      if (page === 1) {
+        console.log(data[datacursor]);
+        console.log(obj[page.toString()]);
+      };
       obj[page.toString()].push(data[datacursor]);
       datacursor++; 
     };
   };
-  page++; 
+  ++page; 
 }
 
 
