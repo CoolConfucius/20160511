@@ -21,4 +21,11 @@ function load(){
   $('#content').append($text);
   // $('#content').text("text");
   var $table = $("<div>"); 
+  var page = 1; 
+  var index = 0; 
+  while(index < data.length && index < page * 10){
+    var $item = $("<div>").text(data[index].toString());
+    $table.append();
+    index++; 
+  }
 }
