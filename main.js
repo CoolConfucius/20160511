@@ -1,6 +1,10 @@
 $(document).ready(init);
 
 var obj = {};
+var data = []; 
+for (var i = 0; i < 100; i++) {
+  data.push(i.toString()); 
+};
 
 obj = {
   all: []
@@ -16,4 +20,5 @@ function load(){
   $text.text("text");
   $('#content').append($text);
   // $('#content').text("text");
+  var $table = $("<div>"); 
 }
