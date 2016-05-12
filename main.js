@@ -62,7 +62,7 @@ function pagination(){
   var $input = $("<input>"); 
   $input.attr("id", "pageinput");
   var $inputgo = $("<div>"); 
-  $inputgo.attr("id", "inputgo").addClass("btn btn-success");
+  $inputgo.attr("id", "inputgo").addClass("btn btn-success").text("Go");
   $('#content').append($pages, $input, $inputgo);
 }
 
