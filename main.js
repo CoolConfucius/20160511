@@ -58,6 +58,9 @@ function pagination(){
     var $page = $("<div>");
     $page.addClass("btn btn-success pagebtn");
     $page.text(i.toString());
+    if (i !== 1 && i !== obj.pagesint) {
+      $page.hide(); 
+    };
     $pages.append($page);
   };
   var $pageinput = $("<input>"); 
