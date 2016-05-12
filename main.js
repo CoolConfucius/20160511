@@ -35,9 +35,9 @@ function init(){
 
 function load(){
   // alert("load!");
-  var $text = $("<h2>");
-  $text.text("text");
-  $('#content').append($text);
+  // var $text = $("<h2>");
+  // $text.text("text");
+  // $('#content').append($text);
   // $('#content').text("text");
   var $table = $("<div>"); 
   $table.addClass("table");
