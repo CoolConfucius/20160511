@@ -68,7 +68,14 @@ function pagination(){
 }
 
 function pageclick() {
-  currentpage = $(this).text(); 
+  var btnnum = $(this).text(); 
+  if (btnnum === "1") {
+    console.log("First page");
+  };
+  if (btnnum === obj.pagesint.toString()) {
+    console.log("Last page");
+  };
+  currentpage = btnnum; 
   console.log(currentpage);
   display(); 
 }
