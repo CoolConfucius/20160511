@@ -2,6 +2,7 @@ $(document).ready(init);
 
 var obj = {};
 var data = []; 
+var currentpage = 1; 
 for (var i = 0; i < 100; i++) {
   data.push(i.toString()); 
 };
@@ -57,4 +58,9 @@ function pagination(){
     $pages.append($page);
   };
   $('#content').append($pages);
+}
+
+function pageclicked() {
+  currentpage = $(this).text(); 
+  console.log(currentpage);
 }
