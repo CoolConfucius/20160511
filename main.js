@@ -6,6 +6,7 @@ var currentpage = 1;
 for (var i = 0; i < 100; i++) {
   data.push(i.toString()); 
 };
+// ajax
 
 obj = {
   pagesint: 1,
@@ -15,6 +16,7 @@ var datacursor = 0;
 var page = 1; 
 while (datacursor < data.length){
   obj[page.toString()] = [];
+  // 100 instead of 10 for records
   for (var i = 0; i < 10; i++) {
     if (datacursor < data.length) {   
       obj[page.toString()].push(data[datacursor]);
@@ -58,9 +60,10 @@ function pagination(){
     var $page = $("<div>");
     $page.addClass("btn btn-success pagebtn");
     $page.text(i.toString());
-    if (i !== 1 && i !== obj.pagesint) {
-      $page.hide(); 
-    };
+    // if (i !== 1 && i !== obj.pagesint && i !== currentpage) {
+    //   if (i !== currentpage - 1 && i !== ) {};
+    //   $page.hide(); 
+    // };
     $pages.append($page);
   };
   var $pageinput = $("<input>"); 
