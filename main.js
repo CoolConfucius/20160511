@@ -31,6 +31,7 @@ function init(){
   pagination();
   load(); 
   $('.pagebtn').on("click", pageclick);
+  $('#pageinputgo').on("click", pageclick);
 }
 
 function load(){
@@ -59,11 +60,11 @@ function pagination(){
     $page.text(i.toString());
     $pages.append($page);
   };
-  var $input = $("<input>"); 
-  $input.attr("id", "pageinput");
-  var $inputgo = $("<div>"); 
-  $inputgo.attr("id", "inputgo").addClass("btn btn-success").text("Go");
-  $('#content').append($pages, $input, $inputgo);
+  var $pageinput = $("<input>"); 
+  $pageinput.attr("id", "pageinput");
+  var $pageinputgo = $("<div>"); 
+  $pageinputgo.attr("id", "pageinputgo").addClass("btn btn-success").text("Go");
+  $('#content').append($pages, $pageinput, $pageinputgo);
 }
 
 function pageclick() {
@@ -72,7 +73,7 @@ function pageclick() {
   display(); 
 }
 
-function inputgoclick() {
+function pageinputgoclick() {
   currentpage = $("#pageinput").text(); 
   console.log(currentpage);
   display(); 
