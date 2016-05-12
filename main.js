@@ -31,7 +31,7 @@ function init(){
   pagination();
   load(); 
   $('.pagebtn').on("click", pageclick);
-  $('#pageinputgo').on("click", pageclick);
+  $('#pageinputgo').click(pageinputgoclick);
 }
 
 function load(){
@@ -74,7 +74,12 @@ function pageclick() {
 }
 
 function pageinputgoclick() {
-  currentpage = $("#pageinput").text(); 
+  var val = $("#pageinput").val(); 
+  if (val <= 0 || val > obj.pagesint) {
+    console.log("Not a valid input");
+    return; 
+  };
+  currentpage = val; 
   console.log(currentpage);
   display(); 
 }
