@@ -7,6 +7,7 @@ for (var i = 0; i < 100; i++) {
 };
 
 obj = {
+  pagesint: 1,
   all: data
 }
 var datacursor = 0; 
@@ -14,27 +15,19 @@ var page = 1;
 while (datacursor < data.length){
   obj[page.toString()] = [];
   for (var i = 0; i < 10; i++) {
-    if (datacursor < data.length) {
-      if (page === 1) {
-        console.log(data[datacursor]);
-        console.log(obj[page.toString()]);
-      };
+    if (datacursor < data.length) {   
       obj[page.toString()].push(data[datacursor]);
       datacursor++; 
     };
   };
-  ++page; 
+  page++; 
 }
+obj.pagesint = page - 1; 
 
-
-for (var i = 0; i < data.length; i++) {
-  var page = 1; 
-  obj[page.toString()] = [];
-  // data[i]
-};
 
 
 function init(){
+  pagination();
   load(); 
 }
 
@@ -53,4 +46,12 @@ function load(){
     index++; 
   }
   $('#content').append($table);
+}
+
+function pagination(){
+  var $pages = $("<div>")
+  for (var i = 1; i <= obj.pagesint; i++) {
+    $pages.append("<div>").addClass("btn").text(i.toString());
+  };
+  $('#content').append($pages);
 }
