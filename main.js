@@ -40,6 +40,7 @@ function load(){
   $('#content').append($text);
   // $('#content').text("text");
   var $table = $("<div>"); 
+  $table.addClass("table");
   var page = 1; 
   var index = 0; 
   while(index < data.length && index < page * 10){
@@ -64,4 +65,9 @@ function pagination(){
 function pageclicked() {
   currentpage = $(this).text(); 
   console.log(currentpage);
+  display(); 
+}
+
+function display() {
+  $('.table').remove(); 
 }
