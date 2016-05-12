@@ -30,7 +30,7 @@ obj.pagesint = page - 1;
 function init(){
   pagination();
   load(); 
-  $('.pagebtn').on("click", pageclicked);
+  $('.pagebtn').on("click", pageclick);
 }
 
 function load(){
@@ -66,8 +66,14 @@ function pagination(){
   $('#content').append($pages, $input, $inputgo);
 }
 
-function pageclicked() {
+function pageclick() {
   currentpage = $(this).text(); 
+  console.log(currentpage);
+  display(); 
+}
+
+function inputgoclick() {
+  currentpage = $("#pageinput").text(); 
   console.log(currentpage);
   display(); 
 }
