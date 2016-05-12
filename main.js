@@ -51,7 +51,10 @@ function load(){
 function pagination(){
   var $pages = $("<div>")
   for (var i = 1; i <= obj.pagesint; i++) {
-    $pages.append("<div>").addClass("btn").text(i.toString());
+    var $page = $("<div>");
+    $page.addClass("btn btn-success");
+    $page.text(i.toString());
+    $pages.append($page);
   };
   $('#content').append($pages);
 }
