@@ -70,4 +70,11 @@ function pageclicked() {
 
 function display() {
   $('.table').remove(); 
+  var $table = $("<div>"); 
+  $table.addClass("table"); 
+  for (var i = 0; i < obj[currentpage.toString()].length; i++) {
+    var $item = $("<div>").text(obj[currentpage.toString()][i].toString());
+    $table.append($item);
+  };
+  $('#content').append($table);
 }
