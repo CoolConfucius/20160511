@@ -59,7 +59,11 @@ function pagination(){
     $page.text(i.toString());
     $pages.append($page);
   };
-  $('#content').append($pages);
+  var $input = $("<input>"); 
+  $input.attr("id", "pageinput");
+  var $inputgo = $("<div>"); 
+  $inputgo.attr("id", "inputgo").addClass("btn btn-success");
+  $('#content').append($pages, $input, $inputgo);
 }
 
 function pageclicked() {
