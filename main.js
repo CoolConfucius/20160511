@@ -30,6 +30,7 @@ obj.pagesint = page - 1;
 function init(){
   pagination();
   load(); 
+  $('.pagebtn').on("click", pageclicked);
 }
 
 function load(){
@@ -53,7 +54,7 @@ function pagination(){
   var $pages = $("<div>")
   for (var i = 1; i <= obj.pagesint; i++) {
     var $page = $("<div>");
-    $page.addClass("btn btn-success");
+    $page.addClass("btn btn-success pagebtn");
     $page.text(i.toString());
     $pages.append($page);
   };
